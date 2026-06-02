@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "MLTable": "yaml",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "ios": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
-}
