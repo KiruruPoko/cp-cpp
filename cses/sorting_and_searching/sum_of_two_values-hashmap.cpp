@@ -7,7 +7,7 @@ int main(){
     int n;
     int target; 
     cin >> n >> target;
-    map<int, int> sets; 
+    map<int, int> sets; // cses has anti hash T_T
     for (int i = 1; i <= n; i++){
         int v;
         cin >> v; 
