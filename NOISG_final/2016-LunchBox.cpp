@@ -14,7 +14,6 @@ int main(){
     }
     sort(k.begin(), k.end());
     for (auto &a: k){
-        if (a ==  0) continue;
         sum += a; 
         if (sum > n) {
             break; 
