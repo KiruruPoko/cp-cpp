@@ -27,7 +27,7 @@ int main(){
             else if (dir == "W") x -= len; 
         }
         else if ((int)dir.length() == 2){
-            double d = len / sqrt(2); // cos sin 45
+            double d = len * sqrt(2) / 2; // cos sin 45
             if (dir == "NE") x += d, y += d; 
             else if (dir == "NW") x -= d, y += d; 
             else if (dir == "SE") x += d, y -= d; 
