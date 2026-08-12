@@ -1,9 +1,7 @@
-#include <iostream>
-#include <cctype>
+#include <bits/stdc++.h>
 using namespace std;
-
+string text;
 int main(){
-    string text;
     cin >> text;
     bool acl = false;
     bool asl = false;
@@ -18,9 +16,9 @@ int main(){
     if (asl && acl){
         cout << "Mix";
     }
-    else if (acl){
-        cout << "All Capital Letter";
+    else {
+        if (acl && !asl) cout << "All Capital Letter";
+        else cout << "All Small Letter";
     }
-    else cout << "All Smaller Letter";
     return 0;
 }
