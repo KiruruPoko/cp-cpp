@@ -22,7 +22,7 @@ int main(){
         }
         else if (it == s.end()){
             nxt = *--it; 
-            /* greatest value more than pos (shift 2 to the left from it)
+            /* greatest value less than pos (shift 2 to the left from it)
             {-a, pos, a} -> --it will point at -a and it will point at a
             */
         }
