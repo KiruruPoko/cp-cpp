@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std; 
 typedef long long ll;
-#define pii pair<int, int>
 
 int main(){
     ios::sync_with_stdio(false); 
@@ -9,12 +8,30 @@ int main(){
     int n; 
     cin >> n; 
     ll sum = 0; 
-    vector<pii> point(n); 
-    for (int i = 0; i < n; i++) cin >> point[i].first >> point[i].second; 
-    for (int l = 0; l < n; l++){
-        for (int r = l + 1; r < n; r++){
-            sum += abs(point[l].first - point[r].first) + abs(point[l].second - point[r].second); 
-        }
-    }
+    vector<ll> x(n), y(n); 
+    for (int i = 0; i < n; i++) cin >> x[i] >> y[i]; 
+    sort(x.begin(), x.end()); 
+    sort(y.begin(), y.end()); 
+    for (int i = 1; i < n; i++){
+        sum += (x[i] - x[i - 1]) * i * (n - i); 
+        sum += (y[i] - y[i - 1]) * i * (n - i); 
+    }                       
     cout << sum << '\n';
 }
+/*
+brute force is TLE, so we need to derive the math instead of calculating all pair
+x and y are calculated independently, so we don't need to keep it in same pair?
+if we sort, all node can be reached together since it is all connected.
+ex. a, b, c, d, e (in ascending order)
+a -> b 
+a -> c = a -> b then b -> c 
+a -> d = a -> b then b -> c then c -> d 
+a -> e = a -> b then b -> c then c -> d then d -> e
+you can see that a -> b has appeared for 4 times in total. 
+Hence, the sum can be calculated by number of times appear * distance.
+// code 
+for (int i = 1; i < n; i++){
+        sum += (x[i] - x[i - 1]) * i * (n - i); 
+        sum += (y[i] - y[i - 1]) * i * (n - i); 
+    }         
+*/
