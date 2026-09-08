@@ -10,7 +10,7 @@ int main(){
     if (a<b) swap(a, b);
     while (b > 0){
         ans += a / b; 
-        a %= b; 
+        a %= b;     
         swap(a, b);
     }
     cout << ans - 1 << '\n';
