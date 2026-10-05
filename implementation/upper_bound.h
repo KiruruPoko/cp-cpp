@@ -1,5 +1,5 @@
-# binary search upper bound
-# can also be used via std::upper_bound
+// binary search upper bound
+// can also be used via std::upper_bound
 
 int upper_bound(int n, vector<int> &a, int x){
     int l = -1, r = n; // imagine adding -inf to leftmost and inf to rightmost to fix boundary  
@@ -17,4 +17,4 @@ int upper_bound(int n, vector<int> &a, int x){
     }
     return ans
 }
-# lower_bound just change condition from "(a[m] <= x)" to "(a[m] < x)"
+// lower_bound just change condition from "(a[m] <= x)" to "(a[m] < x)"

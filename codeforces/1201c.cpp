@@ -25,13 +25,13 @@ int main(){
     }
     sort(arr.begin(), arr.end());
     ll l = 1; 
-    ll h = 2e9;
-    while (l != h){
-        ll mid = (l + h + 1) / 2;
+    ll r = 2e9;
+    while (l != r){
+        ll mid = (l + r + 1) / 2;
         if (check(mid)) {
             l = mid; 
         }
-        else h = mid - 1; 
+        else r = mid - 1; 
     }
     cout << l << '\n';
 
