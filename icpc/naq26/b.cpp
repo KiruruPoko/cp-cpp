@@ -20,7 +20,7 @@ int main(){
         int a = v[l];
         int b = v[l + 1];
         int c = v[r];
-        cout << a << " " << b << " " << c << " " << "Current ans: " << ans << "\n";
+        // cout << a << " " << b << " " << c << " " << "Current ans: " << ans << "\n";
         if (b - a > c - b) ans++; 
     }
     cout << ans << '\n';
