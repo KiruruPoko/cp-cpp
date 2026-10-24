@@ -25,3 +25,4 @@ void spfa(int start, int n){
 
 
 // single shortest path but can be used for negative
+// Source: https://github.com/tchomphoochan/toi14-tutorial/blob/master/1-graph.md

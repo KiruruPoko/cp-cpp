@@ -6,7 +6,6 @@ typedef long long ll;
 typedef pair<int, int> pii; 
 typedef pair<ll, ll> pll;
 
-bool printed[200005] = {false};
 int main(){
     ios::sync_with_stdio(false); 
     cin.tie(nullptr); 
@@ -15,7 +14,7 @@ int main(){
     while (tt--){
         int n; 
         cin >> n; 
-        fill(printed, printed + n + 1, false);
+        bool printed[n + 1] = {false};
         stack<int> docs; 
         vector<int> ans;
         string s; 

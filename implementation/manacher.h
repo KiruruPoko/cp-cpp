@@ -22,3 +22,4 @@ vector<int> manacher(string &s){
 //sz = (int)(x).size()
 
 // used for finding longest palindrome substring.
+// Source: atcoder ABC398 F editorial

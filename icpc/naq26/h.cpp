@@ -6,25 +6,25 @@ typedef long long ll;
 typedef pair<int, int> pii; 
 typedef pair<ll, ll> pll;
 
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+int get_rand_int(int a, int b){
+    return uniform_int_distribution<int> (a, b)(rng);
+}
+
+void solve(){
+    string guess = "FT";
+    for (int i = 0; i < 100; i++){
+        cout << guess[get_rand_int(0, 1)] << flush;
+        char c; 
+        cin >> c;
+        if (c == 'F') cout << 'T' << flush;
+        else cout << 'F' << flush; 
+        cin >> c; 
+    }
+}
 int main(){
     ios::sync_with_stdio(false); 
     cin.tie(nullptr); 
-    vector<char> ans(201);
-    for (int i = 1; i <= 200; i++){
-        if (i % 2 == 0) ans[i] = 'T';
-        else ans[i] = 'F';
-    } 
-    int i = 0; 
-    while (i < 200){
-        int t; 
-        cin >> t;   
-        cout << ans[2 * t] << flush;
-        char response; 
-        cin >> response; 
-        if (response == 'F'){
-            swap(ans[2 * t], ans[2 * t - 1]);
-        }
-        i++; 
-        cout << response << flush; 
-    }
+    int tt; cin >> tt; 
+    while(tt--) solve();
 }

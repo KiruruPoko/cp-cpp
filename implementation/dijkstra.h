@@ -5,9 +5,9 @@ struct ascending {
 };
 using pq_min = priority_queue<pll, vector<pll>, ascending>; 
 void dijkstra(ll *dist, ll n, ll src){
-    vector<bool> visited(n, false);
+    vector<bool> visited(n + 1, false);
     pq_min pq; 
-    for (int i = 0; i < n; i++) dist[i] = INF; 
+    for (int i = 1; i < n; i++) dist[i] = INF; 
     dist[src] = 0; 
     pq.push({src, dist[src]});
     while (!pq.empty()){
