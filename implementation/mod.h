@@ -1,6 +1,0 @@
-(x + y) % m = (x % m + y % m) % m 
-(x - y) % m = (x % m - y % m) % m 
-(x * y) % m = (x % m * y % m) % m 
-x^n % m = (x % m)^n % m
-
-// ^ = power here, not xor
