@@ -12,9 +12,10 @@ int main(){
     ll sum = 0; 
     int r = -1; 
     for (int i = 0; i < n; i++) cin>>a[i];
-    for (int l = 0; l < n; sum -= a[l++]){
+    for (int l = 0; l < n; sum -= a[l], l++){
         while (r + 1 < n && sum + a[r + 1] <= x) {
-            sum += a[++r];
+            sum += a[r + 1];
+            r++; 
             if (sum == x) {
                 cnt++; 
                 break;
